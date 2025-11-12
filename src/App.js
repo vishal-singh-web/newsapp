@@ -21,7 +21,7 @@ export default class App extends Component {
   }
   render() {
     return (
-       <BrowserRouter>
+       <BrowserRouter basename="/newsapp">
        <Navbar/>
         <LoadingBar
         height={3}

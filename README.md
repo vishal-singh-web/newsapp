@@ -1,70 +1,124 @@
-# Getting Started with Create React App
+# 📰 NewsMatrix - React News App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A responsive React.js news web application for browsing and reading the latest news articles by category. Fetches real-time data from public news APIs and provides an intuitive interface to explore top headlines across multiple topics.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Demo
 
-### `npm start`
+[Live Demo](https://vishal-singh-web.github.io/my-app/)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## ✨ Features
 
-### `npm test`
+- Browse news by category (Technology, Sports, Business, Science, etc.)
+- Responsive design (desktop & mobile)
+- Clean, modern UI built with React & Bootstrap
+- Fast navigation between news categories
+- Article meta: title, description, source, date
+- Direct link to full articles
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 🏁 Getting Started
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. **Clone the repository**
+git clone https://github.com/vishal-singh-web/newsapp.git
+cd newsapp
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+text
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. **Install dependencies**
+npm install
 
-### `npm run eject`
+text
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. **Configure API Key**
+- Uses [NewsAPI](https://newsapi.org/) or compatible source
+- Create `.env` in the root:
+  ```
+  REACT_APP_NEWS_API_KEY=your_api_key_here
+  ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+4. **Run locally**
+npm start
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+text
+- App will be available at `http://localhost:3000`
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## 📡 API Reference
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Endpoint
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+GET https://newsapi.org/v2/top-headlines
 
-### Code Splitting
+text
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+**Query Parameters:**
 
-### Analyzing the Bundle Size
+| Param     | Type   | Description            |
+|-----------|--------|------------------------|
+| `apiKey`  | String | Your NewsAPI key       |
+| `country` | String | Country code (optional)|
+| `category`| String | News category          |
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+**Example Request:**
+GET https://newsapi.org/v2/top-headlines?country=in&category=technology&apiKey=YOUR_API_KEY
 
-### Making a Progressive Web App
+text
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+**Sample Response:**
+{
+"status": "ok",
+"totalResults": 38,
+"articles": [
+{
+"source": { "id": null, "name": "NDTV" },
+"author": "John Doe",
+"title": "Latest Technology News",
+"description": "Brief description...",
+"url": "https://www.ndtv.com/...",
+"urlToImage": "https://image.url",
+"publishedAt": "2025-11-20T09:00:00Z",
+"content": "Full content..."
+}
+// more articles...
+]
+}
 
-### Advanced Configuration
+text
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
+## 🗂️ Project Structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+newsapp/
+├── src/
+│ ├── components/
+│ ├── App.js
+│ └── index.js
+├── public/
+│ └── index.html
+├── package.json
+└── README.md
 
-### `npm run build` fails to minify
+text
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+
+## 🧰 Technologies
+
+- React.js
+- Bootstrap
+- JavaScript (ES6)
+- HTML/CSS
+- [NewsAPI](https://newsapi.org/)
+
+---
+
+## 🤝 Contributing
+
+Pull requests are welcome! For major changes, please open an issue first to discuss ideas.

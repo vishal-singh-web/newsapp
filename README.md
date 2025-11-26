@@ -6,7 +6,7 @@ A responsive React.js news web application for browsing and reading the latest n
 
 ## 🚀 Demo
 
-[Live Demo](https://vishal-singh-web.github.io/my-app/)
+[Live Demo](https://vishal-singh-web.github.io/newsapp/)
 
 ---
 
